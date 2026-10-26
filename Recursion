@@ -1,0 +1,39 @@
+// Recursion
+public class Main
+{
+    public static void prints(int n){
+        if(n==0){
+            return;
+        }
+        prints(n-1);
+        System.out.println("OMKAR");
+    }
+    public static void nums(int n){
+        if(n==0){
+            return;
+        }
+        nums(n-1);
+        System.out.print(n+" ");
+    }
+    public static void dicincpri(int x){
+        if(x==0){
+            return;
+        }
+        System.out.println(x+" ");
+        dicincpri(x-1);
+        System.out.println(x+" ");
+    }
+    public static void printnums(int x, int y){
+        if(x>y){
+            return;
+        }
+        System.out.print(x+" ");
+        printnums(x+1, y);
+    }
+	public static void main(String[] args) {
+		//prints(5);
+		//nums(5);
+		dicincpri(5);
+		//printnums(5,8);
+	}
+}
