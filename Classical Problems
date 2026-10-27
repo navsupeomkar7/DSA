@@ -1,0 +1,45 @@
+// Fibbonacci Series - 1
+public class Main
+{
+    public static void prints(int n){
+        if(n==0){
+            return;
+        }
+        prints(n-1);
+        System.out.println("OMKAR");
+    }
+    public static void nums(int n){
+        if(n==0){
+            return;
+        }
+        nums(n-1);
+        System.out.print(n+" ");
+    }
+	public static void main(String[] args) {
+		//prints(5);
+		nums(5);
+	}
+}
+
+// Fibbonacci Series - 2
+public class Main
+{
+    public static int fib(int n){
+        if(n==1){
+            return 0;
+        }
+        if(n==2){
+            return 1;
+        }
+        
+        return fib(n-1)+fib(n-2);
+        
+    }
+	public static void main(String[] args) {
+		int n = 5;
+		
+		for(int idx=1; idx<=n; idx++){
+		    System.out.print(fib(idx)+" ");
+		}
+	}
+}
