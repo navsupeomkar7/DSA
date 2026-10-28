@@ -1,0 +1,43 @@
+//Nth number fibonacci series
+public class Main
+{
+    public static long factorial(int n){
+        if(n==0){
+            return 1;
+        }
+        
+        long t = factorial(n-1);
+        
+        return n*t;
+    }
+	public static void main(String[] args) {
+		long n = factorial(5);
+		
+		System.out.println(n);
+		
+	}
+}
+
+
+//Print 1 to N Fibonacci series
+public class Main
+{
+    public static int fib(int n){
+        if(n==1){
+            return 0;
+        }
+        if(n==2){
+            return 1;
+        }
+        
+        return fib(n-1)+fib(n-2);
+        
+    }
+	public static void main(String[] args) {
+		int n = 5;
+		
+		for(int idx=1; idx<=n; idx++){
+		    System.out.print(fib(idx)+" ");
+		}
+	}
+}
