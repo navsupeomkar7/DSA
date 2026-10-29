@@ -1,0 +1,106 @@
+// Power Calculation Time Complexity O(N) 
+public class Main
+{
+    public static long powxton(int x, int n){
+        if(n==0){
+            return 1;
+        }
+        
+        long t = powxton(x,n-1);
+        
+        return t*x;
+    }
+	public static void main(String[] args) {
+		long n = powxton(2,3);
+		
+		System.out.println(n);
+	}
+}
+=====================================================================================================================================================================
+
+// Optimized Power Calculation Time Complexity O(log2 n)
+public class Main
+{
+    public static long power(int x, int n){
+        if(n==0){
+            return 1;
+        }
+        
+        long sub = power(x,n/2);
+        
+        if(n%2==0){
+            return sub*sub;
+        }
+        
+        return sub*sub*x;
+    }
+	public static void main(String[] args) {
+		long n = power(2,32);
+		
+		System.out.println(n);
+	}
+}
+=====================================================================================================================================================================
+
+// Sum of natural numbers N to 1
+public class Main
+{
+    public static long sum1ton(int n){
+        if(n==0){
+            return 0;
+        }
+        
+        long sub = sum1ton(n-1);
+        
+        return n+sub;
+    }
+	public static void main(String[] args) {
+		
+		long n = sum1ton(5);
+		
+		System.out.println(n);
+		
+	}
+}
+
+=====================================================================================================================================================================
+
+// Product of natural numbers N to 1
+public class Main
+{
+    public static long productN(int n){
+        if(n==0){
+            return 1;
+        }
+        
+        long sub = productN(n-1);
+        
+        return sub*n;
+    }
+	public static void main(String[] args) {
+		long n = productN(5);
+		
+		System.out.println(n);
+	}
+}
+
+=====================================================================================================================================================================
+
+//Recursive Multiplication using only substraction and addition
+public class Main
+{
+    public static long recmul(int n, int m){
+        if(n==0){
+            return 0;
+        }
+        
+        long sub = recmul(n-1,m);
+        
+        return sub+m;
+    }
+	public static void main(String[] args) {
+		long n  =  recmul(5 , 5);
+		
+		System.out.println(n);
+	}
+}
